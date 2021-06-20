@@ -2,9 +2,9 @@
 <head th:replace="~{base :: head}"></head>
 <body>
     <div align="center">
-        <h1>Criar novo aluno</h1>
+        <h1>Criar novo professor</h1>
         <br />
-        <form action="#" th:action="@{/aluno/save}" th:object="${aluno}"
+        <form action="#" th:action="@{/professor/save}" th:object="${professor}"
             method="post">
  
             <table border="0" cellpadding="10">
@@ -17,8 +17,8 @@
                     <td><input type="text" th:field="*{sexo}" /></td>
                 </tr>
                 <tr>
-                    <td>Matrícula:</td>
-                    <td><input type="text" th:maxlength="10" th:field="*{matricula}" /></td>
+                    <td>Registro:</td>
+                    <td><input type="text" th:maxlength="10" th:field="*{registro}" /></td>
                 </tr>
             
                 <tr>

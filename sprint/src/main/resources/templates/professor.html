@@ -21,7 +21,7 @@
 					th:classappend="${status} == 'entregue' ? 'active'"
 					class="nav-item nav-link" href="/disciplina">Disciplina</a>
 				<div>
-					<a href="/aluno/novo">
+					<a href="/professor/novo">
 						<button class="btn btn-outline-secondary my-2 my-sm-0">Novo</button>
 					</a>
 
@@ -29,25 +29,25 @@
 			</div>
 		</nav>
 
-		<div class="card mb-3" th:each="aluno : ${listAlunos}">
+		<div class="card mb-3" th:each="professor : ${listProfessores}">
 
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12 col-sm-8 mb-3">
 						<div class="row">
 							<div class="col-md-5">
-								Nome: <span th:text="${aluno.nome}">Nome</span>
+								Nome: <span th:text="${professor.nome}">Nome</span>
 							</div>
 							<div class="col-md-5">
-								Sexo: <span th:text="${aluno.sexo}">Sexo</span>
+								Sexo: <span th:text="${professor.sexo}">Sexo</span>
 							</div>
 							<div class="col-md-5">
-								Matricula: <span th:text="${aluno.matricula}">Matricula</span>
+								Registro: <span th:text="${professor.registro}">Registro</span>
 							</div>
 						</div>
-						<a th:href="@{'/aluno/edit/' + ${aluno.id}}">
+						<a th:href="@{'/professor/edit/' + ${professor.id}}">
 							<button class="btn btn-outline-secondary my-2 my-sm-0">Editar</button>
-						</a> <a th:href="@{'/aluno/delete/' + ${aluno.id}}">
+						</a> <a th:href="@{'/professor/delete/' + ${professor.id}}">
 							<button class="btn btn-outline-secondary my-2 my-sm-0">Excluir</button>
 						</a>
 

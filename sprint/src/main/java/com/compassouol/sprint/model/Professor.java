@@ -5,17 +5,22 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity
-public class Aluno {
+public class Professor {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	private String nome;
 	private String sexo;
-	private String matricula;
+	private String registro;
 	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -28,16 +33,10 @@ public class Aluno {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public String getMatricula() {
-		return matricula;
+	public String getRegistro() {
+		return registro;
 	}
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
-	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
+	public void setRegistro(String registro) {
+		this.registro = registro;
+	}	
 }

@@ -47,8 +47,7 @@ public class AlunoController {
 		return "redirect:/aluno";
 		
 	}
-	
-	
+		
 	@RequestMapping(value = "/aluno/edit/{id}")
 	public ModelAndView editarAluno(@PathVariable(name = "id") Long id) {
 	    ModelAndView mav = new ModelAndView("aluno/edit");
